@@ -25,7 +25,10 @@ def main():
     count_failed_check_lodestar_processing_complete = 0
     
     log_files = file_dir.rglob(file_type)
-
+    
+    log_parse
+    
+def log_parse():
     for log_file in log_files:
         content = log_file.open()
         for line in content:
@@ -72,11 +75,8 @@ def main():
                     print('-------------')
                     print('-------------')
 
-print("Number of errors: " + str(countErrors))
-print("Number of failed tasks: " + str(countFailedTasks))
-print("Number of failed jobs: " + str(countFailedJobs))
-
-print("end of dag run")
-
-if __name__ == '__main__':
-    main()
+    print("Number of errors: " + str(countErrors))
+    print("Number of failed tasks: " + str(countFailedTasks))
+    print("Number of failed jobs: " + str(countFailedJobs))
+    
+    print("end of dag run")
